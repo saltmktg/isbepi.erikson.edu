@@ -1,0 +1,128 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="MainMaster.master.cs" Inherits="HVP.MainMaster" %>
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title>(PI) Program Monitoring</title>
+    <link rel="stylesheet" type="text/css" href="StyleSheet1.css"/> 
+   
+    <asp:ContentPlaceHolder ID="head" runat="server">        
+    </asp:ContentPlaceHolder>     
+</head>
+<body>
+   
+    <form id="form1" autocomplete="off" runat="server">
+          <asp:ScriptManager ID="ScriptManager1" runat="server"></asp:ScriptManager>
+    <div id="main">
+        <div id ="imgTop">
+            <h1 id="toptitle">Prevention Initiative (PI) <br />Program Monitoring</h1>
+        </div>       
+        <asp:LoginName ID="LoginName1" runat="server" Font-Size="Medium" FormatString="Welcome, {0}" />
+                   <asp:LoginStatus ID="LoginStatus1" runat="server" LogoutAction="Redirect" OnLoggingOut="LoginStatus1_LoggingOut" LogoutPageUrl="~/logout.aspx" CssClass="hv" />     
+       <table class="masterTable">                  
+            <tr>
+            <td class="nav">  
+                <br />              
+                <asp:LoginView ID="LoginView1" runat="server">
+                    <RoleGroups>
+                        <asp:RoleGroup Roles="Administrator">
+                            <ContentTemplate>
+                                <div>
+                                    <asp:Menu ID="Menu2" runat="server" StaticDisplayLevels="100" SkipLinkText="" MaximumDynamicDisplayLevels="0">
+                                        <Items>
+                                            <asp:MenuItem NavigateUrl="~/Admin/default.aspx" Text="Admin Home" Value="Admin" ToolTip="Admin Home"></asp:MenuItem>
+                                            <asp:MenuItem NavigateUrl="~/Admin/managesite.aspx" Text="Manage Sites" ToolTip="Manage Sites" Value="Manage Sites"></asp:MenuItem>
+                                            <asp:MenuItem NavigateUrl="~/Admin/Manage.aspx" Text="Manage Monitors" Value="Manage Monitors"></asp:MenuItem>
+                                            <asp:MenuItem Text="Manage Users" ToolTip="Manage Users" Value="Manage Users" NavigateUrl="~/ManageUsers/ManageUser.aspx"></asp:MenuItem>
+                                            <asp:MenuItem Text="Update Resources" ToolTip="Update Resources" Value="Update Resources"></asp:MenuItem>
+                                            <asp:MenuItem NavigateUrl="~/ChangePassword.aspx" Text="Change Password" Value="Change Password" ToolTip="Change Password"></asp:MenuItem>
+                                        </Items>
+                                        <StaticMenuItemStyle Width="205px" BorderColor="White" BorderStyle="Solid" BorderWidth="1px" Font-Bold="True" ></StaticMenuItemStyle>
+                                    </asp:Menu>
+                                </div>
+                            </ContentTemplate>
+                        </asp:RoleGroup>
+                        
+                        <asp:RoleGroup Roles="Staff">
+                             <ContentTemplate>
+                                <div>
+                                    <asp:Menu ID="Menu3" runat="server" StaticDisplayLevels="100" SkipLinkText="" MaximumDynamicDisplayLevels="0">
+                                        <Items>
+                                            <asp:MenuItem NavigateUrl="~/Staff/default.aspx" Text="Staff Home" Value="Staff " ToolTip="Staff Home"></asp:MenuItem>
+                                            <asp:MenuItem NavigateUrl="~/Staff/ViewSchdList.aspx" Text="Search Sites" ToolTip="Search Sites" Value="Search Sites"></asp:MenuItem>
+                                            <asp:MenuItem Text="Run Report" ToolTip="Run Report" Value="Run Report"></asp:MenuItem>
+                                            <asp:MenuItem Text="Change Password" ToolTip="Change Password" Value="Change Password" NavigateUrl="~/ChangePassword.aspx"></asp:MenuItem>
+                                        </Items>
+                                        <StaticMenuItemStyle Width="205px" BorderColor="White" BorderStyle="Solid" BorderWidth="1px" Font-Bold="True" ></StaticMenuItemStyle>
+                                    </asp:Menu>
+                                </div>
+                            </ContentTemplate>
+                        </asp:RoleGroup>  
+                         <asp:RoleGroup Roles="Program Site Director">
+                            <ContentTemplate>
+                                <div>
+                                     <asp:Menu ID="Menu4" runat="server" StaticDisplayLevels="100" SkipLinkText="" MaximumDynamicDisplayLevels="0">
+                                        <Items>                                           
+                                            <asp:MenuItem NavigateUrl="~/ProgramDirector/default.aspx" Text="Home" Value="Home" ToolTip="Home"></asp:MenuItem>
+                                            <asp:MenuItem Text="Program Director Survey" ToolTip="Program Director Survey" Value="Program Director Survey" NavigateUrl="~/ProgramDirector/PD_Survey .aspx"></asp:MenuItem>
+                                            <asp:MenuItem Text="Edit Information" ToolTip="Edit Information" Value="Edit Information" NavigateUrl="~/ProgramDirector/SiteProfile.aspx"></asp:MenuItem>
+                                            <asp:MenuItem NavigateUrl="~/ProgramDirector/uploadDcumentation.aspx" Text="Upload Documentation" ToolTip="Upload Documentation" Value="Upload Documentation"></asp:MenuItem>
+                                            <asp:MenuItem NavigateUrl="~/ChangePassword.aspx" Text="Change Password" ToolTip="Change Password" Value="Change Password"></asp:MenuItem>
+                                        </Items>
+                                        <StaticMenuItemStyle Width="205px" BorderColor="White" BorderStyle="Solid" BorderWidth="1px" Font-Bold="True" ></StaticMenuItemStyle>
+                                    </asp:Menu>
+                                </div>
+                            </ContentTemplate>
+                        </asp:RoleGroup>                                              
+                    </RoleGroups>                    
+                </asp:LoginView>
+               <%--<asp:Menu ID="Menu1" runat="server" StaticDisplayLevels="100" SkipLinkText="" MaximumDynamicDisplayLevels="0">                    
+                    <Items>
+                        <asp:MenuItem NavigateUrl="~/Admin/default.aspx" Text="Home" Value="Admin" ToolTip="Home">
+                            <asp:MenuItem NavigateUrl="~/Staff/Assign.aspx" Text="Assigning Monitor" ToolTip="Assigning Monitor" Value="Assign Monitor"></asp:MenuItem>
+                            <asp:MenuItem NavigateUrl="~/Admin/Manage.aspx" Text="Manage Monitors" ToolTip="Manage Monitors" Value="Manage"></asp:MenuItem>
+                            <asp:MenuItem NavigateUrl="~/ChangePassword.aspx" Text="Change Password" ToolTip="Chnage Password" Value="Chnage Password"></asp:MenuItem>
+                            <asp:MenuItem NavigateUrl="~/Admin/SiteInfomation.aspx" Text="Site Information" ToolTip="Site Information" Value="Site Information"></asp:MenuItem>
+                            <asp:MenuItem NavigateUrl="~/Staff/Surveyoutput.aspx" Text="HV Survey Data" ToolTip="HV Survey Data" Value="HV Survey Data"></asp:MenuItem>
+                            <asp:MenuItem NavigateUrl="~/Staff/PDSurveyOutput.aspx" Text="PD Survey Data" ToolTip="PD Survey Data" Value="PD Survey Data"></asp:MenuItem>
+                            <asp:MenuItem NavigateUrl="~/Staff/ExporttoExcel.aspx" Target="_blank" Text="HV Survey to Excel" ToolTip="HV Survey to Excel" Value="HV Survey to Excel"></asp:MenuItem>
+                            <asp:MenuItem NavigateUrl="~/Staff/PDtoExcel.aspx" Target="_blank" Text="PD Survey to Excel" ToolTip="PD Survey to Excel" Value="PD Survey to Excel"></asp:MenuItem>
+                            <asp:MenuItem NavigateUrl="~/Staff/HVInterviewtoExcel.aspx" Target="_blank" Text="HV Interview to Excel" ToolTip="HV Interview to Excel" Value="HV Interview to Excel"></asp:MenuItem>
+                            <asp:MenuItem NavigateUrl="~/ManageUsers/ManageUser.aspx" Text="Manage Users" ToolTip="Manage Users" Value="Manage Users"></asp:MenuItem>
+                        </asp:MenuItem>
+                        <asp:MenuItem NavigateUrl="~/Staff/default.aspx" Text="Home" Value="Staff" ToolTip="Home">
+                            <asp:MenuItem NavigateUrl="~/Staff/Assign.aspx" Text="Scheduling/Visiting Sites" Value="Confirmation" ToolTip="Scheduling/Visiting Sites"></asp:MenuItem>
+                            <asp:MenuItem NavigateUrl="~/ChangePassword.aspx" Text="Change Password" Value="Change Password" ToolTip="Change Password"></asp:MenuItem>
+                            <asp:MenuItem NavigateUrl="~/Staff/Surveyoutput.aspx" Text="HV Survey Data" ToolTip="HV Survey Data" Value="HV Survey Data"></asp:MenuItem>
+                            <asp:MenuItem NavigateUrl="~/Staff/PDSurveyOutput.aspx" Text="PD Survey Data" ToolTip="PD Survey Data" Value="PD Survey Data"></asp:MenuItem>
+                            <asp:MenuItem NavigateUrl="~/Staff/ExporttoExcel.aspx" Target="_blank" Text="HV Survey to Excel" ToolTip="HV Survey to Excel" Value="HV Survey to Excel"></asp:MenuItem>
+                            <asp:MenuItem NavigateUrl="~/Staff/PDtoExcel.aspx" Target="_blank" Text="PD Survey to Excel" ToolTip="PD Survey to Excel" Value="PD Survey to Excel"></asp:MenuItem>
+                            <asp:MenuItem NavigateUrl="~/Staff/HVInterviewtoExcel.aspx" Target="_blank" Text="HV Interview to Excel" ToolTip="HV Interview to Excel" Value="HV Interview to Excel"></asp:MenuItem>
+                        </asp:MenuItem>
+                        
+                        <asp:MenuItem NavigateUrl="~/ProgramDirector/default.aspx" Text="Home" Value="ProgramDirector">
+                            <asp:MenuItem NavigateUrl="~/ProgramDirector/SiteProfile.aspx" Text="Site Profile" ToolTip="Site Profile" Value="Site Profile"></asp:MenuItem>
+                            <asp:MenuItem NavigateUrl="~/ChangePassword.aspx" Text="Change Password" ToolTip="Chnage Password" Value="ChnagePassword"></asp:MenuItem>
+                            <asp:MenuItem NavigateUrl="~/UnauthorizedAccess.aspx" Text="PIQRI" ToolTip="PIQRI" Value="PIQRI"></asp:MenuItem>
+                        </asp:MenuItem>
+                        
+                    </Items>                  
+                    
+                    
+<StaticMenuItemStyle Width="205px" BorderColor="White" BorderStyle="Solid" BorderWidth="1px" Font-Bold="True" ForeColor="White"></StaticMenuItemStyle>
+                    
+                    
+                </asp:Menu> --%>
+                                          
+            </td>
+                <td class="masterTable">
+                <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">                           
+                    
+                </asp:ContentPlaceHolder>
+                </td>
+            </tr>
+            </table> 
+    </div>
+    </form>
+</body>
+</html>

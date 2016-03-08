@@ -1,0 +1,45 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="PIQRIInterview.Master.cs" Inherits="HVP.PIQRIInterview.PIQRIInterview" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title>(PI) Program Monitoring</title>
+    <link href="../StyleSheet1.css" type="text/css" rel="stylesheet" />
+       
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+   
+     <form id="form1" runat="server">
+         <asp:ScriptManager ID="ScriptManager1" runat="server">
+            <%--<Scripts>
+                <asp:ScriptReference Path="~/PIQRI_Tool/JavaScript1.js" />
+            </Scripts>--%>
+         </asp:ScriptManager>
+          <asp:LoginName ID="LoginName1" runat="server" Font-Size="Medium" FormatString="Welcome, {0}" />
+                   <asp:LoginStatus ID="LoginStatus1" runat="server" LogoutAction="Redirect" OnLoggingOut="LoginStatus1_LoggingOut" LogoutPageUrl="~/logout.aspx" CssClass="hv" />     
+    <div id="main">
+         <script type="text/javascript">
+             function CloseWindow() {
+                 window.close();
+             }
+    </script>        
+  
+        <div id ="imgTop">
+            <h1 id="toptitle">Prevention Initiative (PI) <br />Program Monitoring</h1>
+        </div>
+        <h2>Prevention Initiative Quality Rating Instrument<br />(PIQRI)</h2>    
+       <%-- <h3 style="text-align:center">Individual Home Visitor Interview</h3>
+     <h4>For each home visitor interviewed, use the Individual Home Visitor Interview. This tool has summary ratings at the end to be filled out for each indicator row. These summary ratings are to be used to determine the final indicator score for the quality rating scales. </h4> 
+        <h4>
+            While on site, conduct the interview and document the interviewee’s responses in the sections labeled “Monitor Notes.” After returning to the office, you can use your notes to score the home visitors on each indicator.  
+        </h4>
+        <h4>DO NOT TRY TO SIMULTANEOUSLY ASK THE QUESTIONS AND SCORE THE INTERVIEW.  THERE WILL BE TIME AT THE OFFICE TO DO THE SCORING. </h4> --%>
+        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">        
+        </asp:ContentPlaceHolder>
+    </div>
+    </form>
+</body>
+</html>

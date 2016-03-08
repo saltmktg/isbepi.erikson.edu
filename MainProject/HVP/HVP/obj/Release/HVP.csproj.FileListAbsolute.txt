@@ -1,0 +1,5 @@
+C:\Users\Lenoy\Documents\Visual Studio 2012\Projects\HVP\HVP\bin\HVP.dll
+C:\Users\Lenoy\Documents\Visual Studio 2012\Projects\HVP\HVP\bin\HVP.pdb
+C:\Users\Lenoy\Documents\Visual Studio 2012\Projects\HVP\HVP\obj\Release\HVP.dll
+C:\Users\Lenoy\Documents\Visual Studio 2012\Projects\HVP\HVP\obj\Release\HVP.pdb
+C:\Users\Lenoy\Documents\Visual Studio 2012\Projects\HVP\HVP\obj\Release\HVP.csprojResolveAssemblyReference.cache

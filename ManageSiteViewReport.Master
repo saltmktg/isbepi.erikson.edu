@@ -1,0 +1,106 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="ManageSiteViewReport.Master.cs" Inherits="HVP.ManageSiteViewReport" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+   <title>(PI) Program Monitoring</title>
+    <link rel="stylesheet" type="text/css" href="StyleSheet1.css"/>    
+    <asp:ContentPlaceHolder ID="head" runat="server">        
+    </asp:ContentPlaceHolder>  
+</head>
+<body>
+     <form id="form1" runat="server">
+          <asp:HiddenField ID="hfsiteid" runat="server" />
+    <asp:HiddenField ID="hfSchdId" runat="server" />
+          <asp:ScriptManager ID="ScriptManager1" runat="server"></asp:ScriptManager>
+		  <div class="header">
+        <div class="logo">
+            <a href="/default.aspx"><img src="/Images/birth.png" alt="ISBEPI"></a>
+        </div>
+        <div id="top-nav">
+            <ul>
+                 <li><a href="/default.aspx">Home</a></li>
+                <li><a href="/about.aspx">About Us</a></li>
+                <li><a href="/contact.aspx">Contact</a></li>              
+			   <li><a href="/Resources.aspx">Resources</a></li>			   
+            </ul>
+        </div>
+    </div>
+    <div id="main">
+        <div id ="imgTop">
+            <h1 id="toptitle">Prevention Initiative (PI) Program Monitoring</h1>
+        </div>       
+        <asp:LoginName ID="LoginName1" runat="server" Font-Size="Medium" FormatString="Welcome, {0}" />
+                  
+       <table class="masterTable">                  
+            <tr>
+            <td class="nav">                 
+                <br />              
+                <asp:LoginView ID="LoginView1" runat="server">                   
+                    <RoleGroups>
+                        <asp:RoleGroup Roles="Administrator">
+                            <ContentTemplate>
+                                <div>
+                                    <asp:Menu ID="Menu2" runat="server" StaticDisplayLevels="100" SkipLinkText="" MaximumDynamicDisplayLevels="0">
+                                        <Items>
+                                            <asp:MenuItem Text="Manage Sites:View Reports" Value="View Reports" Selectable="False"></asp:MenuItem>
+                                            <asp:MenuItem NavigateUrl="~/Admin/default.aspx" Text="Admin Home" Value="Admin" ToolTip="Admin Home"></asp:MenuItem>
+                                            <%----%>
+                                            <asp:MenuItem Text="Site Home" ToolTip="Site Home" Value="Site Home" NavigateUrl="~/Staff/SiteStatusChecklist.aspx"></asp:MenuItem>
+                                            <asp:MenuItem Text="HV View Data" ToolTip="HV View Data" Value="HV_View_Data" NavigateUrl="~/ViewReports/Surveyoutput.aspx"></asp:MenuItem>
+                                            <asp:MenuItem Text="HV Survey to Excel" ToolTip="HV Survey to Excel" Value="HV_Survey_to_Excel" NavigateUrl="~/ViewReports/ExporttoExcel.aspx"></asp:MenuItem>
+                                            <asp:MenuItem NavigateUrl="~/ViewReports/PDSurveyOutput.aspx" Text="PD View Data" ToolTip="PD_View_Data" Value="PD_View_Data"></asp:MenuItem>
+                                            <asp:MenuItem NavigateUrl="~/ViewReports/PDtoExcel.aspx" Text="PD Survey to Excel" ToolTip="PD Survey to Excel" Value="PD_Survey_to_Excel"></asp:MenuItem>
+                                            <asp:MenuItem Text="PIQRI Report" ToolTip="PIQRI Report" Value="PIQRI Report"></asp:MenuItem>
+                                            <asp:MenuItem NavigateUrl="~/PICCTool/PICCTool.aspx" Text="PICC Report" Value="PICC Report" ToolTip="PICC Report"></asp:MenuItem>
+                                            <asp:MenuItem Text="Group Observation Report" ToolTip="Group Observation Report" Value="Group Observation Report"></asp:MenuItem>
+                                            <asp:MenuItem Text="HOVRS Report" ToolTip="HOVRS Report" Value="HOVRS Report"></asp:MenuItem>
+                                            <asp:MenuItem Text="Feedback Report" ToolTip="Feedback Report" Value="Feedback Report"></asp:MenuItem>
+                                            <asp:MenuItem Text="CQIP" ToolTip="CQIP" Value="CQIP"></asp:MenuItem>
+                                        </Items>
+                                        <StaticMenuItemStyle Width="205px" BorderColor="White" BorderStyle="Solid" BorderWidth="1px" Font-Bold="True" ></StaticMenuItemStyle>
+                                    </asp:Menu>
+                                </div>
+                            </ContentTemplate>
+                        </asp:RoleGroup>
+                        
+                        <asp:RoleGroup Roles="Staff">
+                             <ContentTemplate>
+                                <div>
+                                    <asp:Menu ID="Menu3" runat="server" StaticDisplayLevels="100" SkipLinkText="" MaximumDynamicDisplayLevels="0">
+                                        <Items>
+                                          <asp:MenuItem Text="Manage Sites:View Reports" Value="View Reports" Selectable="False"></asp:MenuItem>
+                                            <asp:MenuItem NavigateUrl="~/Staff/default.aspx" Text="Staff Home" Value="Staff " ToolTip="Staff Home"></asp:MenuItem>
+                                            <asp:MenuItem Text="Site Home" ToolTip="Site Home" Value="Site Home" NavigateUrl="~/Staff/SiteStatusChecklist.aspx"></asp:MenuItem>
+                                            <asp:MenuItem Text="HV View Data" ToolTip="HV View Data" Value="HV_View_Data" NavigateUrl="~/ViewReports/Surveyoutput.aspx"></asp:MenuItem>
+                                            <asp:MenuItem Text="HV Survey to Excel" ToolTip="HV Survey to Excel" Value="HV_Survey_to_Excel" NavigateUrl="~/ViewReports/ExporttoExcel.aspx"></asp:MenuItem>
+                                            <asp:MenuItem NavigateUrl="~/ViewReports/PDSurveyOutput.aspx" Text="PD View Data" ToolTip="PD_View_Data" Value="PD_View_Data"></asp:MenuItem>
+                                            <asp:MenuItem NavigateUrl="~/ViewReports/PDtoExcel.aspx" Text="PD Survey to Excel" ToolTip="PD Survey to Excel" Value="PD_Survey_to_Excel"></asp:MenuItem>
+                                            <asp:MenuItem  Text="PIQRI Report" ToolTip="PIQRI Report" Value="PIQRI Report"></asp:MenuItem>
+                                            <asp:MenuItem NavigateUrl="~/PICCTool/PICCTool.aspx" Text="PICC Report" Value="PICC Report" ToolTip="PICC Report"></asp:MenuItem>
+                                            <asp:MenuItem Text="Group Observation Report" ToolTip="Group Observation Report" Value="Group Observation Report"></asp:MenuItem>
+                                            <asp:MenuItem Text="HOVRS Report" ToolTip="HOVRS Report" Value="HOVRS Report"></asp:MenuItem>
+                                            <asp:MenuItem Text="Feedback Report" ToolTip="Feedback Report" Value="Feedback Report"></asp:MenuItem>
+                                            <asp:MenuItem Text="CQIP" ToolTip="CQIP" Value="CQIP"></asp:MenuItem>
+                                        </Items>
+                                        <StaticMenuItemStyle Width="205px" BorderColor="White" BorderStyle="Solid" BorderWidth="1px" Font-Bold="True" ></StaticMenuItemStyle>
+                                    </asp:Menu>
+                                </div>
+                            </ContentTemplate>
+                        </asp:RoleGroup>                        
+                    </RoleGroups>                    
+                </asp:LoginView>            
+                <asp:LoginStatus ID="LoginStatus1" runat="server" LogoutAction="Redirect" OnLoggingOut="LoginStatus1_LoggingOut" LogoutPageUrl="~/logout.aspx" CssClass="hv" />                           
+            </td>
+                <td class="masterTable">
+                <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">                           
+                    
+                </asp:ContentPlaceHolder>
+                </td>
+            </tr>
+            </table> 
+    </div>
+    </form>
+</body>
+</html>

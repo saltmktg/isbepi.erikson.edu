@@ -1,0 +1,18 @@
+﻿<%@ Master Language="C#" MasterPageFile="~/EnterData/ManageSiteEnterData.Master" AutoEventWireup="true" CodeBehind="NestedMasterPIQRI.master.cs" Inherits="HVP.PIQRIFinalTool.NestedMasterPIQRI" %>
+
+<asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
+</asp:Content>
+<asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
+
+    <div id="main">
+        <%--<div id ="imgTop">
+            <h1 id="toptitle">Prevention Initiative (PI) <br />Program Monitoring</h1>
+        </div>--%>
+        <h2>Prevention Initiative Quality Rating Instrument<br />
+            (PIQRI)</h2>
+    </div>
+    <div>       
+        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">       
+        </asp:ContentPlaceHolder>
+    </div>
+</asp:Content>

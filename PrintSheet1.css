@@ -1,0 +1,103 @@
+@media print {
+
+  #main {
+    width: 100%; }
+
+  .heading-alt-1 {
+    font-size: 26px;
+    line-height: 32px; }
+
+  .styled-wrap-1 {
+    padding: 15px 0;
+    border-top: 1px solid #ddd;
+    /*color: #333;*/
+    border-bottom: 1px solid #ddd; }
+
+  #imgTop {
+    background: white;  }
+
+  #toptitle {
+    text-align: center !important;
+    background: white;
+    font-family: 'helvetica_bold', Arial, sans-serif;
+    color: #000 !important; }
+
+  /* PIQRI Page */
+  #mainPiqri {
+    width: 100%;
+    border-top: none;
+    border-left: 1px solid #999;
+    border-right: 1px solid #999; 
+    border-bottom: 1px solid #999; 
+    min-width: 0 !important; }  
+
+  #mainPiqri .Purpose,
+  #mainPiqri .Purpose_topic {
+   /* color: #333; */ }
+
+  #mainPiqri #HVSQ,
+  #mainPiqri #PSD,
+  #mainPiqri #PC,
+  #mainPiqri #PMAD,
+  #mainPiqri #PM_E {
+    padding: 0 50px 20px;
+    display: block !important; }
+
+  #mainPiqri h3.finaltoolTitle {
+    border-top: 1px solid #999;
+    border-bottom: 1px solid #999; }
+
+  #mainPiqri h3.finaltoolTitle, 
+  #mainPiqri h3.scoringTitle {
+    /*background: #f2f2f2;*/
+    /*color: #333 !important; */ } 
+
+  #mainPiqri h3.scoringTitle {
+    border: 1px solid #ddd; }
+
+  #mainPiqri div {
+    display: block !important; }
+
+  #mainPiqri h3 img {
+    display: none !important; }
+
+  #mainPiqri .comments-title {
+    display: none; }
+
+  #mainPiqri textarea[id*="txtComment"] {
+    display: none; }
+
+  #mainPiqri a[id*="lnkSubmit"],
+  #mainPiqri a[id*="lnksubmit"] {
+    display: none; }
+
+  #mainPiqri .piqriscore table.d {
+    font-size: 12px; }
+
+  #mainPiqri td.d,
+  #mainPiqri td.q {
+    font-size: 13px; }
+
+  #mainPiqri a[id*="lnkSubmit"],
+  #mainPiqri a[id*="lnksubmit"],
+  #mainPiqri a[id*="lnlSubmit"],
+  #mainPiqri a[id*="lnlsubmit"] {
+    display: none; }
+
+  #mainPiqri table[id*="FormView"] {
+    float: none;
+    position: relative;
+    overflow: auto;
+    width: 100%;
+    top: 0;
+    right: 0;
+    margin-bottom: 100px;
+    padding-right: 0; }
+
+  .btn-pdf-print {
+    display: none; }
+
+  #top-nav {
+    display: none; }
+
+}

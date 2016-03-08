@@ -1,0 +1,42 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="DirectorSurvey.master.cs" Inherits="HVP.DirectorSurvey" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title>(PI) Program Monitoring</title>    
+    <link href="../StyleSheet1.css" type="text/css" rel="stylesheet" />
+    <link rel="stylesheet" type="text/css" href="../Styles/grid.min.css"/>
+	<link rel="stylesheet" type="text/css"   MEDIA="print, handheld" href="../print.css"/>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body id="surveyPD">
+   <form id="form1" runat="server">
+       <asp:ScriptManager ID="ScriptManager1" runat="server"></asp:ScriptManager>
+    <div class="header">
+        <div class="logo">
+            <a href="/default.aspx"><img src="/Images/birth.png" alt="ISBEPI"></a>
+        </div>
+        <div id="top-nav">
+            <ul>
+                <li><a href="/default.aspx">Home</a></li>
+                <li><a href="/about.aspx">About Us</a></li>
+                <li><a href="/contact.aspx">Contact</a></li>
+                <li><a href="/login.aspx">Login</a></li>
+            </ul>
+        </div>
+    </div><!-- .header -->
+    <div id="main">
+        <div id ="imgTop">
+            <h1 id="toptitle">Prevention Initiative (PI) Program Monitoring</h1>
+        </div> 
+       <div class="container page-survey">           
+            <h2 class="header-alt-1">Program Director Site Survey Visit</h2>
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder>
+       </div>
+    </div>
+    </form>
+</body>
+</html>

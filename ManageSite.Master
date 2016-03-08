@@ -1,0 +1,112 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="ManageSite.master.cs" Inherits="HVP.ManageSite" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head id="Head1" runat="server">
+    <title>(PI) Program Monitoring</title>
+    <link rel="stylesheet" type="text/css" href="StyleSheet1.css"/>    
+    <asp:ContentPlaceHolder ID="head" runat="server">        
+    </asp:ContentPlaceHolder>  
+   
+</head>
+<body>
+   <form id="form1" runat="server">
+       <asp:HiddenField ID="hfsiteid" runat="server" />
+    <asp:HiddenField ID="hfSchdId" runat="server" />
+          <asp:ScriptManager ID="ScriptManager1" runat="server"></asp:ScriptManager>
+		  <div class="header">
+        <div class="logo">
+            <a href="/default.aspx"><img src="/Images/birth.png" alt="ISBEPI"></a>
+        </div>
+        <div id="top-nav">
+            <ul>
+                 <li><a href="/default.aspx">Home</a></li>
+                <li><a href="/about.aspx">About Us</a></li>
+                <li><a href="/contact.aspx">Contact</a></li>              
+			   <li><a href="/Resources.aspx">Resources</a></li>			   
+            </ul>
+        </div>
+    </div><!-- .header -->
+    <div id="main">
+       <div id="imgTop">
+            <h1 id="toptitle">Prevention Initiative (PI) Program Monitoring</h1>
+        </div>        
+        <asp:LoginName ID="LoginName1" runat="server" Font-Size="Medium" FormatString="Welcome, {0}" />                  
+       <table class="masterTable">                  
+            <tr>
+            <td class="nav">                 
+                <br />              
+                <asp:LoginView ID="LoginView1" runat="server">
+                    <RoleGroups>
+                        <asp:RoleGroup Roles="Administrator">
+                            <ContentTemplate>
+                                <div>
+                                    <asp:Menu ID="Menu2" runat="server" StaticDisplayLevels="100" SkipLinkText="" MaximumDynamicDisplayLevels="0">
+                                        <Items>
+                                            <asp:MenuItem Text="Manage Sites" Value="Manage Sites" Selectable="False"></asp:MenuItem>
+                                            <asp:MenuItem NavigateUrl="~/Admin/default.aspx" Text="Admin Home" Value="Admin" ToolTip="Admin Home"></asp:MenuItem>
+                                            <%----%>
+                                            <asp:MenuItem Text="Site Home" ToolTip="Site Home" Value="Site Home" NavigateUrl="~/Staff/SiteStatusChecklist.aspx"></asp:MenuItem>
+                                            <asp:MenuItem Text="Edit Information" ToolTip="Edit Information" Value="Edit Information" NavigateUrl="~/Staff/SiteInformation.aspx"></asp:MenuItem>
+                                            <asp:MenuItem Text="Notes" ToolTip="Notes" Value="Notes" NavigateUrl="~/Staff/CaseNotes.aspx"></asp:MenuItem>
+                                            <asp:MenuItem Text="Enter Data" ToolTip="Enter Data" Value="Enter Data" NavigateUrl="~/EnterData/default.aspx"></asp:MenuItem>
+                                            <asp:MenuItem Text="View Reports" ToolTip="View Reports" Value="View Reports" NavigateUrl="~/ViewReports/default.aspx"></asp:MenuItem>
+                                            <asp:MenuItem NavigateUrl="~/Staff/UploadedMaterials.aspx" Text="Uploaded Materials" ToolTip="Uploaded Materials" Value="Uploaded Materials"></asp:MenuItem>
+                                        </Items>
+                                        <StaticMenuItemStyle Width="205px" BorderColor="White" BorderStyle="Solid" BorderWidth="1px" Font-Bold="True" ></StaticMenuItemStyle>
+                                    </asp:Menu>
+                                </div>
+                            </ContentTemplate>
+                        </asp:RoleGroup>
+                        
+                        <asp:RoleGroup Roles="Staff">
+                             <ContentTemplate>
+                                <div>
+                                    <asp:Menu ID="Menu3" runat="server" StaticDisplayLevels="100" SkipLinkText="" MaximumDynamicDisplayLevels="0">
+                                        <Items>
+                                            <asp:MenuItem Text="Manage Sites" Value="Manage Sites" Selectable="False"></asp:MenuItem>
+                                            <asp:MenuItem NavigateUrl="~/Staff/default.aspx" Text="Staff Home" Value="Staff " ToolTip="Staff Home"></asp:MenuItem>
+                                            <asp:MenuItem Text="Site Home" ToolTip="Site Home" Value="Site Home" NavigateUrl="~/Staff/SiteStatusChecklist.aspx"></asp:MenuItem>
+                                            <asp:MenuItem Text="Edit Information" ToolTip="Edit Information" Value="Edit Information" NavigateUrl="~/Staff/SiteInformation.aspx"></asp:MenuItem>
+                                             <asp:MenuItem Text="Notes" ToolTip="Notes" Value="Notes" NavigateUrl="~/Staff/CaseNotes.aspx"></asp:MenuItem>
+                                             <asp:MenuItem Text="Enter Data" ToolTip="Enter Data" Value="Enter Data" NavigateUrl="~/EnterData/default.aspx"></asp:MenuItem>
+                                            <asp:MenuItem Text="View Reports" ToolTip="View Reports" Value="View Reports" NavigateUrl="~/ViewReports/default.aspx"></asp:MenuItem>
+                                            <asp:MenuItem Text="Uploaded Materials" ToolTip="Uploaded Materials" Value="Uploaded Materials" NavigateUrl="~/Staff/UploadedMaterials.aspx"></asp:MenuItem>
+                                        </Items>
+                                        <StaticMenuItemStyle Width="205px" BorderColor="White" BorderStyle="Solid" BorderWidth="1px" Font-Bold="True" ></StaticMenuItemStyle>
+                                    </asp:Menu>
+                                </div>
+                            </ContentTemplate>
+                        </asp:RoleGroup> 
+                          <asp:RoleGroup Roles="ISBE Consultant">
+                             <ContentTemplate>
+                                <div>     
+                                      <asp:Menu ID="Menu4" runat="server" StaticDisplayLevels="100" SkipLinkText="" MaximumDynamicDisplayLevels="0">
+                                        <Items>
+                                            <asp:MenuItem Text="Manage Sites" Value="Manage Sites" Selectable="False"></asp:MenuItem>
+                                            <asp:MenuItem NavigateUrl="~/ISBEStaff/default.aspx" Text="ISBE Home" Value="ISBE Home" ToolTip="ISBE Home"></asp:MenuItem>
+                                            <asp:MenuItem Text="Site Home" ToolTip="Site Home" Value="Site Home" NavigateUrl="~/ISBEStaff/SiteStatusChecklist.aspx"></asp:MenuItem>
+                                            <asp:MenuItem Text="Site Information" ToolTip="Site Information" Value="Site Information" NavigateUrl="~/ISBEStaff/SiteInformation.aspx"></asp:MenuItem>
+                                            <asp:MenuItem Text="View Reports" ToolTip="View Reports" Value="View Reports"></asp:MenuItem>
+                                        </Items>
+                                        <StaticMenuItemStyle Width="205px" BorderColor="White" BorderStyle="Solid" BorderWidth="1px" Font-Bold="True" ></StaticMenuItemStyle>
+                                    </asp:Menu>
+                                </div>                 
+                                 </ContentTemplate>
+                              </asp:RoleGroup>
+                    </RoleGroups>                    
+                </asp:LoginView>            
+                  <asp:LoginStatus ID="LoginStatus1" runat="server" LogoutAction="Redirect" OnLoggingOut="LoginStatus1_LoggingOut" LogoutPageUrl="~/logout.aspx" CssClass="hv" />                         
+            </td>
+                <td class="masterTable">
+                <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">                           
+                    
+                </asp:ContentPlaceHolder>
+                </td>
+            </tr>
+            </table> 
+    </div>
+    </form>
+</body>
+</html>

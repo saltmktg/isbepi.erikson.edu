@@ -1,0 +1,798 @@
+﻿body {
+font-family: "Trebuchet MS", Verdana, sans-serif;
+font-size: 16px;
+/*background-color: dimgrey;*/
+color: #696969;
+padding: 25px;          
+padding-left:  35px;
+padding-right: 35px;
+padding-top:inherit;
+}
+#surveyPD
+{
+font-family: "Trebuchet MS", Verdana, sans-serif;
+font-size: 16px;
+background-color: dimgrey;
+color: #696969;
+/*padding: 25px;          
+padding-left:  35px;
+padding-right: 35px;*/
+padding-top:inherit;
+}
+
+h1
+{
+color:black;
+}
+
+#main {
+padding: 7px;
+padding-left:  25px;
+padding-right:25px;
+background-color: #ffffff;
+border-radius: 0 0 5px 5px;
+margin:1px;                       
+} 
+.picture 
+{
+color: black;            
+padding-top: 25px;
+text-align:right;
+padding-bottom: 25px;
+           
+}      
+.Title 
+{
+color: #FFFFFF;
+background-color: #3366FF;
+padding-top: 25px;
+padding-right: 50px;
+padding-bottom: 25px;
+padding-left: 50px;
+}
+#homeTitle {
+background-color:#FFFFFF;
+color: #3366FF;
+text-align: center;
+}
+tr 
+{
+vertical-align:top;
+}
+ContentPlaceHolder2 {
+color: #FFFFFF;
+background-color: #3366FF;
+padding-top: 25px;
+padding-right: 50px;
+padding-bottom: 25px;
+padding-left: 50px;
+}
+table.masterTable,td.masterTable
+{
+border:none;
+width:100%;
+}
+h2
+{
+text-align: center;
+}
+h3.scoringTitle
+{
+background-color: #696969;
+color:#ffffff;
+}
+h3,h5 
+{
+background-color: #3366FF;
+color: #FFFFFF;
+}
+.AddUserCancel
+{
+text-align:right;
+}
+#supervisonContent {
+text-align:right;
+}
+ol.d {
+list-style-type: upper-alpha;
+}
+tr.main1Page
+{
+vertical-align:top;
+    
+}
+table.main1PageTop
+{
+border-bottom:solid;
+border-collapse:collapse;   
+width:100%;
+}
+table.main1Page
+{
+/*margin-left:40px;*/
+margin-right: 40px;   
+padding:300px;
+padding-top: 5px;
+/*padding-top:inherit;*/
+padding-left:10px;
+padding-right:10px;
+/*padding-bottom:inherit;*/
+/*width:95%;*/
+/*background-color:ButtonFace;*/
+}
+table.mainPage,th.mainPage  {
+   
+margin-left:auto;
+margin-right: auto;  
+width:70%;
+background-color:#666666;
+}
+th.q
+{
+border-collapse: collapse;   
+border: 1px solid black;
+width:5%;
+height:3%;
+}
+table.HVSurvey
+{
+    margin-left: auto;
+    margin-right: auto;
+    border-collapse: collapse;
+    border: 1px solid black;
+    padding: 5px;
+    width: 100%;
+}
+.radioButtonList
+{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+    .radioButtonList.horizontal li
+    {
+        display: inline;
+    }
+
+    .radioButtonList label
+    {
+        display: inline;
+    }
+th.HVSurvey
+{
+    margin-left: auto;
+    margin-right: auto;
+    border-collapse: collapse;
+    border: 1px solid black;
+    padding: 5px;
+    width: 50%;
+}
+td.HVSurvey
+{
+    margin-left: auto;
+    margin-right: auto;
+    border-collapse: collapse;
+    border: 1px solid black;
+    padding: 5px;
+    width: 50%;
+}
+.HVSurvey tr:nth-child(even) {
+    color: #ffffff;
+    background-color: #696969;
+}
+
+table.d,th.d,td.q {
+   
+margin-left:auto;
+margin-right: auto;
+border-collapse: collapse;
+border: 1px solid black;
+padding:5px;
+width:100%;
+}
+table.PD,th.d,td.q {
+   
+margin-left:auto;
+margin-right: auto;
+border-collapse: collapse;
+border: 1px solid black;
+padding:5px;
+width:100%;
+}
+
+.PD tr:nth-child(even) {
+    color: #ffffff;
+    background-color: #696969;
+}
+
+table.a,th.a,td.q {
+   
+margin-left:auto;
+margin-right: auto;
+border-collapse: collapse;
+border: 1px solid black;
+padding:5px;
+width:auto;
+}
+table.site, td.site
+{
+   
+margin-left:auto;
+margin-right: auto;
+border-collapse: collapse;
+border: 1px solid black;
+padding:5px;
+width:70%;   
+   
+}
+th.site {
+text-align:right;
+}
+td.main1Page
+{
+text-align:center;
+   
+}
+td.mainPage
+{
+text-align:center;
+border: none;
+height:auto;
+padding-bottom:1px;
+margin-bottom:1px;
+  
+}
+td.d {
+     
+text-align:center;
+border: 1px solid black;
+}
+td.scoring {
+     
+text-align:left;
+border: 1px solid black;
+}
+#tdq7 {
+border: 1px solid black;
+}
+table.progressbar {
+width:100%;
+height:15px;
+border: 1px solid #FFFCFC;
+border-collapse: collapse;
+background-color:#F6F6F6;
+border-radius: 25px;
+}
+td.progressbar_1 {
+width:7%;
+background-color:#0ac825;
+border-radius: 25px;
+    
+}
+td.progressbar_2 {
+width:14%;
+background-color:#0ac825;
+border-radius: 25px;
+    
+}
+td.progressbar_3 {
+width:21%;
+background-color:#0ac825;
+border-radius: 25px;
+    
+}
+td.progressbar_4 {
+width:28%;
+background-color:#0ac825;
+border-radius: 25px;
+    
+}
+td.progressbar_5 {
+width:35%;
+background-color:#0ac825;
+border-radius: 25px;
+    
+}
+td.progressbar_6 {
+width:42%;
+background-color:#0ac825;
+border-radius: 25px;
+    
+}
+td.progressbar_7 {
+width:49%;
+background-color:#0ac825;
+border-radius: 25px;
+    
+}
+td.progressbar_8 {
+width:56%;
+background-color:#0ac825;
+border-radius: 25px;
+    
+}
+td.progressbar_9 {
+width:63%;
+background-color:#0ac825;
+border-radius: 25px;
+    
+}
+td.progressbar_10 {
+width:70%;
+background-color:#0ac825;
+border-radius: 25px;
+    
+}
+
+td.progressbar_11 {
+width:77%;
+background-color:#0ac825;
+border-radius: 25px;
+    
+}
+
+td.progressbar_15 {
+width:100%;
+background-color:#0ac825;
+border-radius: 25px;
+    
+}
+.DirectorTraining_Formal 
+{
+color:black;
+font-weight:bold;
+background-color: #FFFF00;
+}
+.DirectorTraining_Informal 
+{
+color:black;
+font-weight:bold;
+background-color: #FF6600;
+
+}
+.DirectorTraining_NotOffered
+{
+font-weight:bold;
+color:black;
+background-color: #9f96f3;
+}
+.HiddenSiteID
+{
+display:none;
+}
+.review
+{
+color: #CC3300;
+}
+#babyImg
+{
+background:#808080 url(../Images/babyy.png) center no-repeat;
+height:300px; 
+width:80%;
+margin-left:auto;
+margin-right:auto;
+padding-left:10px;
+position:static;
+}
+#imgTop
+{
+background:url(../Images/birth.png)right top no-repeat;
+height:100px;
+width:100%;
+border-bottom:solid;
+padding-top:2px;
+position:static;
+}
+#toptitle
+{
+text-align: left;
+position:static;
+}
+#imgFooter
+{
+background:url(../Images/footer.PNG)right bottom no-repeat; 
+height:150px;
+background-size: 40%;
+position:static;
+}
+#adminHome
+{
+background:url(/Images/birthlogo.png) center no-repeat; 
+height:250px;     
+}
+#ConfirmHome
+{
+background:url(/Images/birth.png) center no-repeat; 
+height:150px; 
+border-radius: 25px;
+}
+
+#status
+{
+background:center;
+width: 300px;
+padding: 25px;
+border: 5px solid black;
+margin: 25px;
+}
+#login
+{
+background:center;
+background-color:#808080 ;
+width: auto;
+padding: 25px;
+border: 5px solid black;
+margin: 25px;
+}
+table.hvid
+{
+margin-left:auto;
+margin-right: auto;
+}
+th.hvid
+{
+text-align:right;
+color:white;
+}
+td.hvidbtn
+{
+text-align:center;
+}
+#section
+{
+padding-left:25px;
+padding-right:25px;
+}
+
+a:link, a:visited {   
+/*border-radius: 50px;*/ 
+display: block;
+font-weight: bold;
+color: #ffffff;
+background-color: #0099CC;
+width: 200px;
+text-align: center;
+padding: 4px;
+text-decoration: none;    
+}
+
+a:hover, a:active {
+background-color: #990000;
+}
+
+.cal a
+{
+width:auto;
+}
+h3.finaltoolTitle
+{
+text-align: center;
+background-color:  #0099CC;
+color: #ffffff;
+}
+
+div.Purpose
+{
+font-weight:bold;
+text-align:center;
+}
+div.Purpose_topic
+{
+margin-right: 100px;
+margin-left: 100px;
+text-align:center;
+}
+div.note
+{
+font-weight:bold;   
+font-size:small;
+margin-right: 50px;
+margin-left: 50px;
+}
+.piqriscore
+{
+background-color:  #0099CC;
+color:white;
+}
+#Menu1:link
+{
+border-radius: 0px; 
+}
+#mainPiqri
+{
+
+border:solid;
+border-color: black;
+/*border-width: 1px;*/
+}
+h1.users
+{
+border-bottom-width:thin;
+border-bottom:solid;
+color:#0099CC;
+}
+.userlist
+{
+margin-right: 25px;
+margin-left: 25px;
+}
+legend { 
+display: block;
+padding-left: 2px;
+padding-right: 2px;
+border:solid;
+font-size:large;
+color:#0099CC;
+border-color:#0099CC;
+  
+}
+.field_set{
+border-color:#0099CC;
+border-style: solid;
+margin-left:50px;
+margin-right:70px;
+}
+h4.users
+{
+border-bottom-width:thin;
+border-bottom:solid;
+color:#0099CC;
+}
+.Prog_Picc
+{
+float:left;    
+margin-bottom:5px;
+margin-left: 10px;
+}
+.Add_Picc
+{
+float:left;   
+margin-bottom:5px; 
+margin-left: 10px;
+}
+#piclist
+{
+margin-right: 50px;
+margin-left: 50px;
+}
+
+/*---------------------------*/
+
+
+#piccInfo
+{
+margin: 0 auto;
+}
+ 
+
+#piccInfo label
+{
+width:200px;
+text-align:right;
+display:block;
+}
+
+#piccInfo input
+{
+width: 200px;
+font-family: verdana;
+font-size: 12px;
+color: grey;
+margin: 0 0 5px 5px;
+}
+
+td.picc
+{
+    color:white;
+    text-align: center;
+    border: 1px solid black;
+    background-color:#144f14;
+}
+
+h3.finaltoolTitle_1
+{
+text-align: center;
+background-color:  #377594;
+color: #ffffff;
+}
+td.picc_1
+{
+    color:white;
+    text-align: center;
+    border: 1px solid black;
+    background-color:#3366FF;
+}
+h3.errormsg
+{
+text-align: center;
+background-color:  #ffffff;
+color: red;
+}
+h3.errormsgSuccess
+{
+text-align: center;
+background-color:  #ffffff;
+color: green;
+}
+.ui-autocomplete {
+    /*width:25%;*/
+    background: #ffffff;
+    color:black;
+    border-radius: 0px;
+}
+.ui-menu .ui-menu-item a
+{    
+    height: 10px;
+    font-size: 18px;
+}
+.ui-tooltip {
+    background: #ffffff;
+    color: #96f226;
+    border: 2px solid #454545;
+    border-radius: 0px;
+    box-shadow: 0 0;   
+    
+}
+.ui-helper-hidden-accessible
+{
+    display:none;
+}
+div.wrapper
+{
+     margin:50px 200px;
+     position: relative;
+     width:500px;
+     float:none;
+}
+
+div.label-wrapper
+{   
+    position: relative;
+    min-width: 300px;
+    max-width: 400px;
+    height: 24px;
+    display: block;
+}
+div.label-wrapper > label
+{
+position: absolute;
+left: 0;
+width: 100px;
+text-align: left; /* not absolutely necessary, but will be if you assign a width to the label */
+white-space: nowrap; /* Again, not totally necessary, but if you run out of space otherwise you'll get multiple lines for your label */
+}
+
+div.label-wrapper > input[type=text]
+{
+position: absolute;
+left: 150px; /* Leaves a 15px gap between end of label and start of textbox.  Increase value if you want more than 15px or decrease if you want less */
+}
+div.label-wrapper > select
+{
+position: absolute;
+left: 150px; /* Leaves a 15px gap between end of label and start of textbox.  Increase value if you want more than 15px or decrease if you want less */
+}
+
+#nav ul
+{
+    list-style-type:none;
+    margin:0px;
+    padding:0px;    
+}
+#nav li
+{
+    display:inline-block;
+    margin:10px;
+}
+
+  /*-------------------------------*/
+.custom-combobox {
+position: relative;
+display: inline-block;
+}
+.custom-combobox-toggle {
+position: absolute;
+top: 0;
+bottom: 0;
+margin-left: -1px;
+padding: 0;
+}
+.custom-combobox-input {
+margin: 0;
+padding: 5px 10px;
+}
+
+h2.Sitename
+{
+    text-align:right;    
+    color:#eb771f
+}
+h4.Sitename
+{
+    text-align:right;   
+}
+
+.Main
+{
+    background-color: white;
+    margin-left: auto; /* Center mainTable for >= IE6  */
+    margin-right: auto; /* Center mainTable for >= IE6  */
+}
+.LeftLabelColumn
+{
+    display: block;
+    margin-left: 10px;
+    margin-right: 10px;
+    height: 22px;
+    padding-top: 5px;
+}
+.LeftValueColumn
+{
+    display: block;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+li.status-check-list
+{
+    padding-left: 20px;
+    margin-bottom: 10px;
+}
+
+
+
+/* testing home vistor*/
+
+div.btn
+{
+    float:left;
+    margin:5px;
+}
+
+
+.overlay 
+{
+ position: absolute;
+background-color: #FAFAFA;
+z-index: 2147483647 !important;
+opacity: 0.8;
+overflow: hidden;
+text-align: center; top: 0; left: 0;
+height: 100%;
+width: 100%;
+padding-top:20%;
+}
+
+
+
+/*-------for picc----------*/
+
+.checkbox-list li,
+.checkbox-list ul li {
+  margin-bottom: 5px;
+  /*padding-top: 2px;*/  
+}
+ 
+.checkbox-list label,
+.checkbox-list ul label {
+  /*display: block;*/
+  font-weight: normal;
+  /*padding-left: 21px;*/
+}
+ 
+.checkbox-list input,
+.checkbox-list ul input {
+  display: inline;
+  margin: 0 5px 0 -21px;  
+  top: 2px;
+}
+ 
+.checkbox-list ul {
+  /*margin: 5px 0 0 20px;*/
+}
+ 
+.checkbox-list p,
+.checkbox-list ul p {
+  color: #808080;
+  /*padding-left: 21px;*/
+  margin: 0;
+}

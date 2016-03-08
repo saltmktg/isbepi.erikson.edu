@@ -1,0 +1,42 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site1.master.cs" Inherits="HVP.Site1" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title>(PI) Program Monitoring</title>
+     <link rel="stylesheet" type="text/css" href="StyleSheet1.css"/>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>  
+    
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div id="main">           
+        <div id ="imgTop">
+            <h1 id="toptitle">Prevention Initiative (PI) <br />Program Monitoring</h1>
+        </div>             
+            <h3 id="homeTitle">Welcome </h3>
+         <div id="babyImg">
+             <div>
+                 <br />
+                 <a class="hv_main" href="/login.aspx">Login</a>
+                 <br />
+                 <a  class="hv_main" href="/Survey/PIQRIHomeVisitorOnlineSurvey.aspx">Home Visitor Survey</a>
+                 <%-- <asp:Menu ID="Menu1" runat="server" BackColor="Red" BorderColor="Black" BorderStyle="Solid" BorderWidth="1px" Font-Bold="True" ForeColor="White">
+        <Items>
+            <asp:MenuItem NavigateUrl="~/login.aspx" Text="Login" Value="0"></asp:MenuItem>
+            <asp:MenuItem NavigateUrl="~/Survey/PIQRIHomeVisitorOnlineSurvey.aspx" Text="Home Visitor Survey" Value="1"></asp:MenuItem>
+        </Items>
+        <StaticHoverStyle BackColor="Red" forecolor="Black"  />
+       <StaticMenuItemStyle Width="170px" BackColor="#990000" BorderColor="White" BorderStyle="Solid" BorderWidth="1px" Font-Bold="True" ForeColor="White"></StaticMenuItemStyle>
+    </asp:Menu>--%>
+                  <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">  
+                     </asp:ContentPlaceHolder>
+             </div>
+         </div>    
+            <div id="imgFooter" ></div>     
+            </div>       
+    </form>
+</body>
+</html>

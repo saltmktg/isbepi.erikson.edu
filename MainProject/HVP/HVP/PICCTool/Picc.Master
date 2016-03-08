@@ -1,0 +1,50 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Picc.master.cs" Inherits="HVP.PICCTool.Picc" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+      <title>(PI) Program Monitoring</title>
+    <link href="../StyleSheet1.css" type="text/css" rel="stylesheet" />
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+          <asp:ScriptManager ID="ScriptManager1" runat="server"></asp:ScriptManager>
+    <div id="main">
+         <div id ="imgTop">
+            <h1 id="toptitle">Prevention Initiative (PI) <br />Program Monitoring</h1>
+        </div>
+        <h2><u>ILLINOIS STATE BOARD OF EDUCATION</u><br />Early Childhood Block Grant Prevention Initiative Compliance Checklist
+            <br />Documentation can be paper based or electronic. <br />KEY: Home Visiting (HV), Center-Based (CB), Family Literacy (FL)
+        </h2>   
+        </div>
+          <div id="piclist" style="border:ridge;" runat="server">
+    <div>
+        <asp:HiddenField ID="hfSchid" runat="server" />
+        <h4>ID:<asp:TextBox ID="txtId" runat="server" OnTextChanged="txtId_TextChanged"></asp:TextBox></h4>
+    </div>
+              <asp:UpdatePanel ID="UpdatePanel1" runat="server"><ContentTemplate>
+    <div id="piccInfo">
+        <label style="float:left;">Program Name:</label><asp:TextBox ID="txtprogramName" style="float:left;" runat="server" ReadOnly="True" Width="200px"></asp:TextBox>
+        <label style="float:left;">RCDT:</label><asp:TextBox ID="txtRcdt" runat="server" AutoPostBack="True" OnTextChanged="txtRcdt_TextChanged"></asp:TextBox>       
+        <label style="clear:both; float:left">Address:</label><asp:TextBox ID="txtAddress" style="float:left;" runat="server" ReadOnly="True"></asp:TextBox>        
+        <label style="float:left;">Assessor:</label><asp:TextBox ID="txtAssessor" style="float:left;" runat="server" ReadOnly="True"></asp:TextBox>  
+        <label style="clear:both; float:left">Authorized Official:</label><asp:TextBox ID="txtAuthorizedOfficial" style="float:left;" runat="server" AutoPostBack="True" OnTextChanged="txtAuthorizedOfficial_TextChanged"></asp:TextBox>        
+        <label style="float:left; height: 3px;">Visit Date:</label><asp:TextBox ID="txtVisitDate" style="float:left;" runat="server"  ReadOnly="True"></asp:TextBox>  
+        <label style="clear:both; float:left">Notes:</label><asp:TextBox ID="txtNotes" style="float:left;" runat="server" Width="610px" Height="50px" TextMode="MultiLine" AutoPostBack="True" OnTextChanged="txtNotes_TextChanged"></asp:TextBox> 
+    </div>   
+                  </ContentTemplate></asp:UpdatePanel> 
+    <div style="clear:both;">        
+    </div>  
+       <br />
+        </div>
+    <div>
+        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+        
+        </asp:ContentPlaceHolder>
+    </div>
+    </form>
+</body>
+</html>

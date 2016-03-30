@@ -6,7 +6,7 @@
         <asp:View ID="View1" runat="server">
              <div id="userlist" runat="server">
                 <div> <h1 class="users">Manage Monitors</h1> </div>            
-            <asp:GridView ID="grdManager" runat="server"  AutoGenerateColumns="False" AutoGenerateSelectButton="True" OnSelectedIndexChanging="GridView1_SelectedIndexChanged1" EmptyDataText="NO DATA" EnableModelValidation="True" DataKeyNames="NameID" DataSourceID="SqlDataSource1" HorizontalAlign="Left">
+            <asp:GridView ID="grdManager" runat="server" CssClass="Grid2" AutoGenerateColumns="False" AutoGenerateSelectButton="True" OnSelectedIndexChanging="GridView1_SelectedIndexChanged1" EmptyDataText="NO DATA" EnableModelValidation="True" DataKeyNames="NameID" DataSourceID="SqlDataSource1" HorizontalAlign="Left">
     <Columns>
         <asp:BoundField HeaderText="Name" DataField="Name" SortExpression="Name" />
         <asp:BoundField DataField="NameID" HeaderText="NameID" ReadOnly="True" SortExpression="NameID" ItemStyle-CssClass="HiddenSiteID" HeaderStyle-CssClass ="HiddenSiteID" InsertVisible="False">

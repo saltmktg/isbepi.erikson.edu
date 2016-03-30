@@ -27,7 +27,7 @@
         <br />    
         <br />
         <div>
-            <asp:gridview runat="server" Width="100%" AutoGenerateColumns="False" BackColor="White" BorderColor="#999999" BorderStyle="Solid" BorderWidth="1px" CellPadding="3" EnableModelValidation="True" ForeColor="Black" GridLines="Vertical" DataSourceID="SqlDataSource1">
+            <asp:gridview runat="server" Width="100%" AutoGenerateColumns="False" CssClass="Grid2" BackColor="White" BorderColor="#999999" BorderStyle="Solid" BorderWidth="1px" CellPadding="3" EnableModelValidation="True" ForeColor="Black" GridLines="Vertical" DataSourceID="SqlDataSource1">
                 <AlternatingRowStyle BackColor="#CCCCCC" />
                 <Columns>
                     <asp:BoundField HeaderText="Name" DataField="Name" SortExpression="Name" />

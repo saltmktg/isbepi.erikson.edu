@@ -1277,11 +1277,11 @@ font-size: 12px;
 #mainPiqri .piqriscore table.d td:last-child {
   border-right: 0;
 }
-.piqriscore
+/*.piqriscore
 {
 background-color: #ff7d5e;
 color: white;
-}
+}*/
 #Menu1:link
 {
 border-radius: 0px;
@@ -1301,11 +1301,11 @@ border-width: 1px;
 }
 #mainPiqri table.d {
   position: relative;
-  margin: 0; /* Negative top margin pulls table up to cover h3.finaltoolTitle bottom border */
+  margin: 0 0 25px; /* Negative top margin pulls table up to cover h3.finaltoolTitle bottom border */
   border: 1px solid #dddddd;
   width: auto;
 }
-#mainPiqri table.d:first-of-type {
+#mainPiqri table.d:first-child {
   position: relative;
   top: -2px;
 }
@@ -1439,7 +1439,12 @@ border-width: 1px;
   font-size: 12px; }
 
 .tdParentClass {
-  background: #ff35de; }
+  background: #ffe5de; }
+
+#mainPiqri td.d.piqriParentClass {
+  padding: 2px 10px;
+  background: #ff8461;
+  color: white; }
 
 /* Survey Page
    ------------------------------------------------------ */

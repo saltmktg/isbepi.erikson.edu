@@ -266,6 +266,12 @@ input[id*="Cancel"]:hover {
   position: relative;
   top: 7px; }
 
+.userlist.userlist-managesite {
+  min-height: 460px; }
+
+.callout-box {
+  padding: 8px; }
+
 /*.masterTable #userlist a[id*="lnkbtn"] {
   display: inline-block;
   width: 180px;
@@ -575,8 +581,11 @@ input[id*="btnView"] {
   font-size: 13px;
   font-weight: 300;  }
 
-.ctl00_ctl00_ContentPlaceHolder1_LoginView1_Menu2_4 {
+.ctl00_ctl00_ContentPlaceHolder1_LoginView1_Menu2_4,
+.ctl00_ctl00_LoginView1_Menu2_4,
+.ctl00_LoginView1_Menu2_4 {
   border-width: 0 !important; }
+
 
 /*======================================================
   Content
@@ -754,7 +763,7 @@ tr
 {
 vertical-align:top;
 }
-ContentPlaceHolder2 {
+#ContentPlaceHolder2 {
 color: #FFFFFF;
 background-color: #3366FF;
 padding-top: 25px;
@@ -769,30 +778,34 @@ border:none;
 padding-right: 20px;
 /*width:100%;*/
 }
+.resources .masterTable {
+  margin-left: 205px;
+}
 h2
 {
 text-align: center;
 }
-h3.scoringTitle
+.masterTable h3.scoringTitle
 {
 position: relative;
 z-index: 50;
 margin: 0;
-padding: 12px 15px 9px;
+padding: 5px 15px;
 border-bottom: 1px solid white;
-background-color: #008dea;
-color:#ffffff;
-font-size: 17px;
+background-color: #008dea !important;
+color:#ffffff !important;
+font-size: 18px !important;
+font-family: 'helvetica_bold', Helvetica, Arial, sans-serif;
 text-shadow: 0 1px 1px rgba(0, 0, 0, .2);
 transition: .1s ease all;
 }
-h3.scoringTitle:hover {
-  background-color: #0084db;
+.masterTable h3.scoringTitle:hover {
+  background-color: #0084db !important;
 }
 h3.scoringTitle img {
 float: left;
 position: relative;
-top: -2px;
+top: 7px;
 margin-right: 15px;
 width: 20px !important;
 height: 20px !important;
@@ -1188,17 +1201,23 @@ width:auto;
 
 /* PIQRI Page
    ------------------------------------------------------ */
-h3.finaltoolTitle {
+.masterTable h3.finaltoolTitle {
 margin: 0;
-font-size: 23px;
+font-size: 24px;
+line-height: 30px;
 padding: 14px 20px;
 text-align: left;
-font-family: 'helvetica_bold', Arial, sans-serif;
-background-color:  #ff8461;
-color: #ffffff;
+font-family: 'helvetica_bold', Arial, sans-serif !important;
+background-color:  #ff8461 !important;
+color: #ffffff !important;
 border-bottom: 1px solid #d32f00;
 text-shadow: 0 1px 1px rgba(0, 0, 0, .2);
 transition: .1s ease all;
+}
+.masterTable h3.finaltoolTitle span {
+  font-family: 'helvetica_light', sans-serif;
+  font-weight: 300;
+  font-size: 22px;
 }
 #mainPiqri .subscale-alt-text {
   font-family: 'helvetica_light', Arial, sans-serif;
@@ -1206,8 +1225,8 @@ transition: .1s ease all;
 #mainPiqri div:nth-of-type(9) h3.finaltoolTitle {
   border-bottom: none;
 }
-h3.finaltoolTitle:hover {
-  background-color: #fa734c;
+.masterTable h3.finaltoolTitle:hover {
+  background-color: #fa734c !important ;
 }
 h3.finaltoolTitle img {
 float: left;
@@ -1418,6 +1437,9 @@ border-width: 1px;
 #mainPiqri span[id*="SiteDate"] {
   color: #999;
   font-size: 12px; }
+
+.tdParentClass {
+  background: #ff35de; }
 
 /* Survey Page
    ------------------------------------------------------ */
@@ -1926,12 +1948,37 @@ h4.Sitename
     margin-left: auto; /* Center mainTable for >= IE6  */
     margin-right: auto; /* Center mainTable for >= IE6  */
 }
+.reportsValidatorField {
+  float: right;
+  position: absolute;
+  margin-left: 10px;
+  margin-top: 5px;
+}
+.reportFieldsBlock {
+  float: right;
+  margin-bottom: 15px;
+}
+.reportBtn {
+  margin-left: 100px;
+  margin-top: 10px;
+}
+.masterTable .masterTable .cal a,
+.masterTable .masterTable .cal td a,
+#main table.Grid .cal td a {
+  background: #ddd;
+}
+.masterTable .masterTable .cal a:hover,
+.masterTable .masterTable .cal td a:hover,
+#main table.Grid .cal td a:hover {
+  color: white;
+  background: rgba(0, 150, 228, 1);
+}
 .LeftLabelColumn
 {
     display: block;
     margin-left: 10px;
     margin-right: 10px;
-    height: 22px;
+    height: 35px;
     padding-top: 5px;
 }
 .LeftValueColumn
@@ -1944,6 +1991,9 @@ li.status-check-list
 {
     padding-left: 20px;
     margin-bottom: 10px;
+}
+li.status-check-list a:hover {
+  color: white;
 }
 
 
@@ -1974,7 +2024,8 @@ padding-top:20%;
   margin: 25px 0; }
 
 .visitor-survey table.HVSurvey tr:nth-child(even) {
-  background: #f4f4f4; }
+  color: #696969;
+  background: #eee; }
 
 .visitor-survey table td.HVSurvey {
   vertical-align: middle; }

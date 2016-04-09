@@ -1,12 +1,15 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/GroupObservation/GropObservation.master" AutoEventWireup="true" CodeBehind="GroupObservation.aspx.cs" Inherits="HVP.GroupObservation.GroupObservation" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-    <div>
+    <div style="border: solid 1px;" class="grop-survey">
+        <h3 class="finaltoolTitle_1">PRE-OBSERVATION QUESTIONS</h3>
+        <asp:HiddenField ID="hfsiteid" runat="server" />
+        <asp:HiddenField ID="hfSchdId" runat="server" />
         <p>Ask the group leader the following questions before the group begins.</p>
         <ol>
             <li>
                 <asp:Label ID="lblQ1_Pre" runat="server"></asp:Label>
-                <ul style="list-style-type: none">
+                <ul style="list-style-type: none" class="checkbox-list">
                     <li>
                         <asp:RadioButtonList ID="rdobtnlstQ1_Pre" runat="server">
                             <asp:ListItem Value="1">Parents as Teachers</asp:ListItem>
@@ -20,7 +23,7 @@
             </li>
             <li>
                 <asp:Label ID="lblQ2_Pre" runat="server"></asp:Label>
-                <ul style="list-style-type: none">
+                <ul style="list-style-type: none" class="checkbox-list">
                     <li>
                         <asp:CheckBox ID="chkbxQ2_Pre_1" runat="server" />Enhance positive caregiver-child relationship 
                     </li>
@@ -37,7 +40,8 @@
                         <asp:CheckBox ID="chkbxQ2_Pre_5" runat="server" />Prepare children for school: school-related knowledge, environment
                     </li>
                     <li>
-                        <asp:CheckBox ID="chkbxQ2_Pre_6" runat="server" />Other:  
+                        <asp:CheckBox ID="chkbxQ2_Pre_6" runat="server" />Other:</asp:CheckBox>  
+                        <br>
                         <asp:TextBox ID="txtQ2_Pre_other" runat="server"></asp:TextBox>
                     </li>
                 </ul>
@@ -45,30 +49,30 @@
             <%--Need A Repeater for Q3--%>
             <li>
                 <asp:Label ID="lblQ3_Pre" runat="server"></asp:Label>
-                <ul style="list-style-type: none">
+                <ul style="list-style-type: none" class="checkbox-list">
                     <li>
                         <asp:CheckBox ID="chkbxQ3_Pre_1" runat="server" />
                         Further children’s knowledge of
-                        <asp:TextBox ID="txtQ3_Pre_1" runat="server"></asp:TextBox>
+                        <%--<asp:TextBox ID="txtQ3_Pre_1" runat="server"></asp:TextBox>--%>
                     </li>
                     <li>
                         <asp:CheckBox ID="chkbxQ3_Pre_2" runat="server" />
                         Further caregivers’ knowledge of 
-                        <asp:TextBox ID="txtQ3_Pre_2" runat="server"></asp:TextBox>
+                        <%--<asp:TextBox ID="txtQ3_Pre_2" runat="server"></asp:TextBox>--%>
                     </li>
                     <li>
                         <asp:CheckBox ID="chkbxQ3_Pre_3" runat="server" />
                         Improve children’s skills in 
-                        <asp:TextBox ID="txtQ3_Pre_3" runat="server"></asp:TextBox>
+                        <%--<asp:TextBox ID="txtQ3_Pre_3" runat="server"></asp:TextBox>--%>
                     </li>
                     <li>
                         <asp:CheckBox ID="chkbxQ3_Pre_4" runat="server" />
                         No specific goal
-                        <asp:TextBox ID="txtQ3_Pre_4" runat="server"></asp:TextBox>
+                        <%--<asp:TextBox ID="txtQ3_Pre_4" runat="server"></asp:TextBox>--%>
                     </li>
                     <li>
                         <asp:CheckBox ID="chkbxQ3_Pre_5" runat="server" />
-                        Other
+                        Other:<br>
                         <asp:TextBox ID="txtQ3_Pre_5" runat="server"></asp:TextBox>
                     </li>
                 </ul>
@@ -88,7 +92,7 @@
             </li>
             <li>
                 <asp:Label ID="lblQ5_Pre" runat="server"></asp:Label>
-                <ul style="list-style-type: none">
+                <ul style="list-style-type: none" class="checkbox-list">
                     <li>
                         <asp:CheckBox ID="chkbxQ5_Pre_1" runat="server" />Those receiving home visits
                     </li>
@@ -142,6 +146,18 @@
                 <asp:Label ID="lblQ3_OT" runat="server"></asp:Label><asp:TextBox ID="txtQ3_OT" runat="server"></asp:TextBox>
             </li>--%>
             <li>
+                <h4>Program ID: 
+                <asp:Label ID="lblProgramID" runat="server"></asp:Label>
+                </h4>
+            </li>
+            <li>
+                <h4>Session Start Time: <asp:TextBox ID="txtStartTime" runat="server"></asp:TextBox>&nbsp; End Time: <asp:TextBox ID="txtendTime" runat="server"></asp:TextBox></h4>
+            </li>
+            <li>
+                <h4>Number of Facilitators:
+                    <asp:TextBox ID="txtFacilitators" runat="server"></asp:TextBox></h4>
+            </li>
+            <li>
                 <p>Attendance:</p>
                 <asp:Label ID="lblQ4_OT" runat="server"></asp:Label>
                 <ol type="A">
@@ -153,24 +169,24 @@
                     </li>
                     <li>
                         <asp:Label ID="lblQ4_OT_2" runat="server"></asp:Label>
-                        <%--Number of children attending (Count 20 minutes after group begins)--%> 
+                        <%--Number of children attending (Count 20 minutes after group begins)--%>
                         <br />
                         <asp:TextBox ID="txtQ4_OT_2" runat="server"></asp:TextBox>
                     </li>
                     <li>
                         <asp:Label ID="lblQ4_OT_3" runat="server"></asp:Label>
                         <%--Number of parents present at end--%>
-                       <br />
+                        <br />
                         <asp:TextBox ID="txtQ4_OT_3" runat="server"></asp:TextBox>
                     </li>
                     <li>
-                          <asp:Label ID="lblQ4_OT_4" runat="server"></asp:Label>
+                        <asp:Label ID="lblQ4_OT_4" runat="server"></asp:Label>
                         <%--Number of children present at end--%>
-                       <br />
+                        <br />
                         <asp:TextBox ID="txtQ4_OT_4" runat="server"></asp:TextBox>
                     </li>
                     <li>
-                          <asp:Label ID="lblQ4_OT_5" runat="server"></asp:Label>
+                        <asp:Label ID="lblQ4_OT_5" runat="server"></asp:Label>
                         <%--Number of staff present--%>
                         <br />
                         <asp:TextBox ID="txtQ4_OT_5" runat="server"></asp:TextBox>
@@ -226,7 +242,7 @@
             </li>
             <li>
                 <asp:Label ID="lblQ7_OT" runat="server"></asp:Label>
-                <ul style="list-style-type: none">
+                <ul style="list-style-type: none" class="checkbox-list">
                     <li>
                         <asp:CheckBox ID="chkbxQ7_OT_1" runat="server" />
                         Multiple stations/areas for children to play with 
@@ -241,20 +257,20 @@
                     </li>
                     <li>
                         <asp:CheckBox ID="chkbxQ7_OT_4" runat="server" />
-                        Room size was inadequate:
+                        Room size was inadequate:<br>
                         <%--second section, radiobutton--%>
-                         <ul style="list-style-type: none">
+                        <ul style="list-style-type: none">
                             <li>
-                                <asp:RadioButtonList ID="rdobtnQ7_OT_4" runat="server" RepeatDirection="Horizontal">
+                                <asp:RadioButtonList ID="rdobtnQ7_OT_4" runat="server" RepeatDirection="Vertical">
                                     <asp:ListItem Value="1">too small</asp:ListItem>
-                                    <asp:ListItem Value="2">too small                  </asp:ListItem>
+                                    <asp:ListItem Value="2">too small</asp:ListItem>
                                 </asp:RadioButtonList>
                             </li>
                         </ul>
 
                         <%--second section, radiobutton--%></li>
                     <li>
-                        <asp:CheckBox ID="chkbxQ7_OT_5" runat="server" />Other (please describe):
+                        <asp:CheckBox ID="chkbxQ7_OT_5" runat="server" />Other (please describe):</asp:CheckBox><br>
                         <asp:TextBox ID="txtQ7_OT_5" runat="server"></asp:TextBox>
                     </li>
                 </ul>
@@ -384,12 +400,12 @@
                             <strong>Please respond to the following questions:</strong>
                         </td>
                         <td class="HVSurvey">
-                            <p><strong>Disagree = 1, Disagree = 2, Neutral = 3, Agree = 4, Strongly Agree =5,	Not Applicable = NA</strong></p>
+                            <p><strong>Strongly Disagree = 1, Disagree = 2, Neutral = 3, Agree = 4, Strongly Agree =5,  Not Applicable = NA</strong></p>
 
                         </td>
                     </tr>
                     <tr>
-                        <td class="HVSurvey" colspan="2">Welcome / Ice Breaker
+                        <td class="HVSurvey" colspan="2"><span style="color: #FF6600">Welcome / Ice Breaker</span>
                         </td>
                     </tr>
                     <tr>
@@ -417,8 +433,7 @@
                                 <asp:ListItem>2</asp:ListItem>
                                 <asp:ListItem>3</asp:ListItem>
                                 <asp:ListItem>4</asp:ListItem>
-                                <asp:ListItem>5</asp:ListItem>
-                                <asp:ListItem Value="0">NA</asp:ListItem>
+                                <asp:ListItem>5</asp:ListItem>                               
                             </asp:RadioButtonList>
                         </td>
                     </tr>
@@ -432,13 +447,12 @@
                                 <asp:ListItem>2</asp:ListItem>
                                 <asp:ListItem>3</asp:ListItem>
                                 <asp:ListItem>4</asp:ListItem>
-                                <asp:ListItem>5</asp:ListItem>
-                                <asp:ListItem Value="0">NA</asp:ListItem>
+                                <asp:ListItem>5</asp:ListItem>                               
                             </asp:RadioButtonList>
                         </td>
                     </tr>
                     <tr>
-                        <td class="HVSurvey" colspan="2">Facilitator and Facilitation Skills
+                        <td class="HVSurvey" colspan="2"><span style="color: #FF6600">Facilitator and Facilitation Skills</span>
                         </td>
                     </tr>
                     <tr>
@@ -451,16 +465,15 @@
                                 <asp:ListItem>2</asp:ListItem>
                                 <asp:ListItem>3</asp:ListItem>
                                 <asp:ListItem>4</asp:ListItem>
-                                <asp:ListItem>5</asp:ListItem>
-                                <asp:ListItem Value="0">NA</asp:ListItem>
+                                <asp:ListItem>5</asp:ListItem>                                
                             </asp:RadioButtonList>
                         </td>
                     </tr>
                     <tr>
-                        <td class="HVSurvey">
+                        <td class="HVSurvey" style="height: 39px">
                             <asp:Label ID="lblQ10_OT_2_2" runat="server"></asp:Label>
                         </td>
-                        <td class="HVSurvey">
+                        <td class="HVSurvey" style="height: 39px">
                             <asp:RadioButtonList ID="rdobtnQ10_OT_2_2" runat="server" RepeatDirection="Horizontal">
                                 <asp:ListItem>1</asp:ListItem>
                                 <asp:ListItem>2</asp:ListItem>
@@ -511,8 +524,7 @@
                                 <asp:ListItem>2</asp:ListItem>
                                 <asp:ListItem>3</asp:ListItem>
                                 <asp:ListItem>4</asp:ListItem>
-                                <asp:ListItem>5</asp:ListItem>
-                                <asp:ListItem Value="0">NA</asp:ListItem>
+                                <asp:ListItem>5</asp:ListItem>                                
                             </asp:RadioButtonList>
                         </td>
                     </tr>
@@ -547,17 +559,16 @@
                         </td>
                     </tr>
                     <tr>
-                        <td class="HVSurvey">
+                        <td class="HVSurvey" style="height: 39px">
                             <asp:Label ID="lblQ10_OT_2_8" runat="server"></asp:Label>
                         </td>
-                        <td class="HVSurvey">
+                        <td class="HVSurvey" style="height: 39px">
                             <asp:RadioButtonList ID="rdobtnQ10_OT_2_8" runat="server" RepeatDirection="Horizontal">
                                 <asp:ListItem>1</asp:ListItem>
                                 <asp:ListItem>2</asp:ListItem>
                                 <asp:ListItem>3</asp:ListItem>
                                 <asp:ListItem>4</asp:ListItem>
-                                <asp:ListItem>5</asp:ListItem>
-                                <asp:ListItem Value="0">NA</asp:ListItem>
+                                <asp:ListItem>5</asp:ListItem>                                
                             </asp:RadioButtonList>
                         </td>
                     </tr>
@@ -571,13 +582,12 @@
                                 <asp:ListItem>2</asp:ListItem>
                                 <asp:ListItem>3</asp:ListItem>
                                 <asp:ListItem>4</asp:ListItem>
-                                <asp:ListItem>5</asp:ListItem>
-                                <asp:ListItem Value="0">NA</asp:ListItem>
+                                <asp:ListItem>5</asp:ListItem>                                
                             </asp:RadioButtonList>
                         </td>
                     </tr>
                     <tr>
-                        <td class="HVSurvey" colspan="2">Content
+                        <td class="HVSurvey" colspan="2"><span style="color: #FF6600">Content</span>
                         </td>
                     </tr>
                     <tr>
@@ -590,8 +600,7 @@
                                 <asp:ListItem>2</asp:ListItem>
                                 <asp:ListItem>3</asp:ListItem>
                                 <asp:ListItem>4</asp:ListItem>
-                                <asp:ListItem>5</asp:ListItem>
-                                <asp:ListItem Value="0">NA</asp:ListItem>
+                                <asp:ListItem>5</asp:ListItem>                                
                             </asp:RadioButtonList>
                         </td>
                     </tr>
@@ -605,8 +614,7 @@
                                 <asp:ListItem>2</asp:ListItem>
                                 <asp:ListItem>3</asp:ListItem>
                                 <asp:ListItem>4</asp:ListItem>
-                                <asp:ListItem>5</asp:ListItem>
-                                <asp:ListItem Value="0">NA</asp:ListItem>
+                                <asp:ListItem>5</asp:ListItem>                               
                             </asp:RadioButtonList>
                         </td>
                     </tr>
@@ -620,8 +628,7 @@
                                 <asp:ListItem>2</asp:ListItem>
                                 <asp:ListItem>3</asp:ListItem>
                                 <asp:ListItem>4</asp:ListItem>
-                                <asp:ListItem>5</asp:ListItem>
-                                <asp:ListItem Value="0">NA</asp:ListItem>
+                                <asp:ListItem>5</asp:ListItem>                               
                             </asp:RadioButtonList>
                         </td>
                     </tr>
@@ -635,14 +642,13 @@
                                 <asp:ListItem>2</asp:ListItem>
                                 <asp:ListItem>3</asp:ListItem>
                                 <asp:ListItem>4</asp:ListItem>
-                                <asp:ListItem>5</asp:ListItem>
-                                <asp:ListItem Value="0">NA</asp:ListItem>
+                                <asp:ListItem>5</asp:ListItem>                               
                             </asp:RadioButtonList>
                         </td>
                     </tr>
 
                     <tr>
-                        <td class="HVSurvey" colspan="2">Early Childhood Development
+                        <td class="HVSurvey" colspan="2" style="color: #006600"><span style="color: #FF6600">Early Childhood Development</span>
                         </td>
                     </tr>
                     <tr>
@@ -655,8 +661,7 @@
                                 <asp:ListItem>2</asp:ListItem>
                                 <asp:ListItem>3</asp:ListItem>
                                 <asp:ListItem>4</asp:ListItem>
-                                <asp:ListItem>5</asp:ListItem>
-                                <asp:ListItem Value="0">NA</asp:ListItem>
+                                <asp:ListItem>5</asp:ListItem>                                
                             </asp:RadioButtonList>
                         </td>
                     </tr>
@@ -670,8 +675,7 @@
                                 <asp:ListItem>2</asp:ListItem>
                                 <asp:ListItem>3</asp:ListItem>
                                 <asp:ListItem>4</asp:ListItem>
-                                <asp:ListItem>5</asp:ListItem>
-                                <asp:ListItem Value="0">NA</asp:ListItem>
+                                <asp:ListItem>5</asp:ListItem>                              
                             </asp:RadioButtonList>
                         </td>
                     </tr>
@@ -685,8 +689,7 @@
                                 <asp:ListItem>2</asp:ListItem>
                                 <asp:ListItem>3</asp:ListItem>
                                 <asp:ListItem>4</asp:ListItem>
-                                <asp:ListItem>5</asp:ListItem>
-                                <asp:ListItem Value="0">NA</asp:ListItem>
+                                <asp:ListItem>5</asp:ListItem>                               
                             </asp:RadioButtonList>
                         </td>
                     </tr>
@@ -700,14 +703,13 @@
                                 <asp:ListItem>2</asp:ListItem>
                                 <asp:ListItem>3</asp:ListItem>
                                 <asp:ListItem>4</asp:ListItem>
-                                <asp:ListItem>5</asp:ListItem>
-                                <asp:ListItem Value="0">NA</asp:ListItem>
+                                <asp:ListItem>5</asp:ListItem>                              
                             </asp:RadioButtonList>
                         </td>
                     </tr>
 
                     <tr>
-                        <td class="HVSurvey" colspan="2">Handouts
+                        <td class="HVSurvey" colspan="2"><span style="color: #FF6600">Handouts</span>
                         </td>
                     </tr>
                     <tr>
@@ -717,8 +719,7 @@
                         <td class="HVSurvey">
                             <asp:RadioButtonList ID="rdobtnQ10_OT_5_1" runat="server" RepeatDirection="Horizontal">
                                 <asp:ListItem Value="1">Y</asp:ListItem>
-                                <asp:ListItem Value="2">N</asp:ListItem>
-                                <asp:ListItem Value="0">NA</asp:ListItem>
+                                <asp:ListItem Value="2">N</asp:ListItem>                                
                             </asp:RadioButtonList>
                         </td>
                     </tr>
@@ -759,7 +760,7 @@
                         </td>
                     </tr>
                     <tr>
-                        <td class="HVSurvey" colspan="2">Interaction
+                        <td class="HVSurvey" colspan="2"><span style="color: #FF6600">Interaction</span>
                         </td>
                     </tr>
                     <tr>
@@ -772,8 +773,7 @@
                                 <asp:ListItem>2</asp:ListItem>
                                 <asp:ListItem>3</asp:ListItem>
                                 <asp:ListItem>4</asp:ListItem>
-                                <asp:ListItem>5</asp:ListItem>
-                                <asp:ListItem Value="0">NA</asp:ListItem>
+                                <asp:ListItem>5</asp:ListItem>                               
                             </asp:RadioButtonList>
                         </td>
                     </tr>
@@ -797,7 +797,7 @@
                             <asp:Label ID="lblQ10_OT_6_3" runat="server"></asp:Label>
                         </td>
                         <td class="HVSurvey">
-                            <asp:RadioButtonList ID="c" runat="server" RepeatDirection="Horizontal">
+                            <asp:RadioButtonList ID="rdobtnQ10_OT_6_3" runat="server" RepeatDirection="Horizontal">
                                 <asp:ListItem>1</asp:ListItem>
                                 <asp:ListItem>2</asp:ListItem>
                                 <asp:ListItem>3</asp:ListItem>
@@ -905,7 +905,7 @@
                 <asp:TextBox ID="txtQ4_Post" runat="server"></asp:TextBox>
             </li>
             <li>
-                <asp:Label ID="lblQ5_Post" runat="server" Text="Label"></asp:Label>
+                <asp:Label ID="lblQ5_Post" runat="server"></asp:Label>
                 <asp:RadioButtonList ID="rdobtnQ5_Post" runat="server" RepeatDirection="Horizontal">
                     <asp:ListItem Value="1">Yes</asp:ListItem>
                     <asp:ListItem Value="2">No</asp:ListItem>
@@ -949,11 +949,12 @@
             </li>
             <li>
                 <asp:Label ID="lblQ7_Post" runat="server"></asp:Label><br />
-                <asp:TextBox ID="TextBox1" runat="server" Height="75px" Width="300px" TextMode="MultiLine"></asp:TextBox>
+                <asp:TextBox ID="txtQ7_Post" runat="server" Height="75px" Width="300px" TextMode="MultiLine"></asp:TextBox>
             </li>
         </ol>
-        <div>
-            <asp:Button ID="btnSubmit" runat="server" BackColor="#F3F3F3" BorderStyle="Solid" BorderWidth="5px" Font-Bold="True" Font-Italic="False" Font-Size="X-Large" Font-Strikeout="False" Font-Underline="False" ForeColor="Black" Height="50px" Text="Submit" Width="150px" />
+         <div>
+            <asp:Button ID="btnSubmit" runat="server" BackColor="#0095DA" Class="btn-submit" BorderStyle="Solid" BorderWidth="5px" Font-Bold="True" Font-Italic="False" Font-Size="X-Large" Font-Strikeout="False" Font-Underline="False" ForeColor="White" Height="50px" Text="Submit" Width="150px" OnClick="btnSubmit_Click" />
         </div>
     </div>
+   
 </asp:Content>

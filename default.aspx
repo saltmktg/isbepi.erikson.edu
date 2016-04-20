@@ -26,7 +26,9 @@
 								Site developed by
 							</div>
 							<div class="logo-1">
-								<img src="Images/logo-erikson-trans.png">
+							  <a href="http://www.erikson.edu/">
+									<img src="Images/logo-erikson-trans.png">
+								</a>
 							</div>
 						</div>
 						<div class="col-xs-6">
@@ -34,7 +36,9 @@
 								Site funded by
 							</div>
 							<div class="logo-2">
-								<img src="Images/logo-isbepi-trans.png">
+								<a href="http://www.isbe.net/">
+									<img src="Images/logo-isbepi-trans.png">
+								</a>
 							</div>
 						</div>
 					</div>

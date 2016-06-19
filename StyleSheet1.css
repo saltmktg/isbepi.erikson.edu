@@ -1472,6 +1472,53 @@ border-width: 1px;
   text-shadow: 0 1px 1px rgba(100,100,100,.15) }
 
 
+/* Program Director Interview PIQRI Page
+   ------------------------------------------------------ */
+.pd-piqri h3.scoringTitle,
+.hv-piqri h3.scoringTitle {
+  padding: 5px;
+  color: white;
+  background: #0095e4; }
+
+.pd-piqri h3,
+.hv-piqri h3 {
+  padding: 5px;
+  color: white;
+  background: #ff8461; }
+
+.pd-piqri h3.scoringTitle img,
+.hv-piqri h3.scoringTitle img {
+  top: 4px; }
+
+.pd-piqri input[type="checkbox"],
+.hv-piqri input[type="checkbox"] {
+  margin-right: 6px;
+  position: relative;
+  top: -1px; }
+
+.pd-piqri input[type="radio"],
+.hv-piqri input[type="radio"] {
+  position: relative;
+  top: -1px; }
+
+.pd-piqri td.d,
+.hv-piqri td.d {
+  padding: 8px; }
+
+.pd-piqri .freq-text-2 {
+  display: inline-block;
+  padding-top: 24px; }
+
+.hv-piqri .note-a {
+  display: inline-block;
+  padding-left: 40px;
+  padding-top: 15px; }
+
+.hv-piqri #VIGNETTE h5 {
+  background: #0095e4;
+  padding: 5px;
+  font-size: 15px; }
+
 
 /* Survey Page
    ------------------------------------------------------ */
@@ -1850,10 +1897,14 @@ display:block;
 #piccInfo input
 {
 width: 200px;
-font-family: verdana;
+/*font-family: verdana;*/
 font-size: 12px;
 color: grey;
 margin: 0 0 5px 5px;
+}
+.picc-id-field {
+  margin-left: 10px;
+  padding-right: 5px;
 }
 
 td.picc
@@ -2144,7 +2195,7 @@ padding-top:20%;
 .checkbox-list input,
 .checkbox-list ul input {
   display: inline;
-  margin: 0 5px 0 -21px;  
+  /*margin: 0 5px 0 -21px;*/  
   top: 2px;
 }
  
